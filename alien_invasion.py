@@ -38,7 +38,7 @@ class AlienInvasion:
             # Watch for keyboard and mouse events.
             self._check_events()
             self.ship.update()
-            #self.alien.update()  # Update the alien's position
+            self.alien_fleet.update_fleet()  # Update the alien's position
             # Make the most recently drawn screen visible.
             self._update_screen()
             self.clock.tick(self.settings.FPS) 

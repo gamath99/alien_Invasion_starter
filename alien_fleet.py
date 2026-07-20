@@ -74,8 +74,26 @@ class Alienfleet:
         """Create an alien and place it in the fleet."""
         new_alien = Alien(self, current_x, current_y)
 
-        self.fleet.add(new_alien)  # Add the new alien to the fleet group
+        self.fleet.add(new_alien)  # Add the new alien to the fleet group\
     
+    def _check_fleet_edges(self):
+        alien: Alien
+        for alien in self.fleet:
+            if alien.check_edges():
+                self._drop_alien_fleet()
+                alien.y +=self.fleet_drop_speed
+                break
+
+    def _drop_alien_fleet(self):
+        for alien in self.fleet:
+            print('here')
+            alien.y += self.fleet_drop_speed
+
+    def update_fleet(self):
+        self._check_fleet_edges()
+        self.fleet.update()
+
+
     def draw(self):
         """Draw all aliens in the fleet."""
         alien:'Alien'
