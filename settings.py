@@ -18,6 +18,7 @@ class Settings:
 
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'laserBlast.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'laser.mp3'
+        self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'impactSound.mp3'
         self.bullet_speed = 7
         self.bullet_w = 25
         self.bullet_h = 80
@@ -27,9 +28,9 @@ class Settings:
         self.alien_file = Path.cwd() / 'Assets' / 'images' / 'enemy_4.png'
         self.alien_w = 40
         self.alien_h = 40
-        self.fleet_speed = 5
+        self.fleet_speed = 2
         self.fleet_direction = 1  # 1 represents right; -1 represents left
-        self.fleet_ drop_speed = 10  # How quickly the fleet drops down
+        self.fleet_drop_speed = 40  # How quickly the fleet drops down
 
 
 
