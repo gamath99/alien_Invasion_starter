@@ -81,7 +81,7 @@ class Alienfleet:
         for alien in self.fleet:
             if alien.check_edges():
                 self._drop_alien_fleet()
-                alien.y +=self.fleet_drop_speed
+                self.fleet_direction *= -1
                 break
 
     def _drop_alien_fleet(self):

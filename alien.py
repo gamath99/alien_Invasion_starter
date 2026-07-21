@@ -35,10 +35,7 @@ class Alien(Sprite):
         """Move the bullet up the screen."""
         temp_speed = self.settings.fleet_speed
 
-        #if self.check_edges():
-        #    #self.settings.fleet_direction *= -1
-        #    self.y +=self.settings.fleet_drop_speed
-
+       
         self.x += temp_speed * self.fleet.fleet_direction
         self.rect.x = self.x  # Update the rect position.
         self.rect.y = self.y  # Update the rect position.
@@ -47,9 +44,7 @@ class Alien(Sprite):
         """Return True if alien is at edge of screen."""
         return(self.rect.right >= self.boundaries.right or self.rect.left <= 0
             )
-        if self.rect.right >= self.boundaries.right or self.rect.left <= 0:
-            return True
-        return False
+        
 
 
        
