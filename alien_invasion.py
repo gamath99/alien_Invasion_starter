@@ -83,8 +83,6 @@ class AlienInvasion:
             # Update HUD view 
 
     
-
-
     def _check_game_status(self):
         if self.game_stats.ships_left > 0:
             self.game_stats.ships_left -= 1
@@ -97,7 +95,7 @@ class AlienInvasion:
         print(self.game_stats.ships_left)
         
    
-        
+      
     
     def _reset_level(self):
         self.ship.arsenal.arsenal.empty()
