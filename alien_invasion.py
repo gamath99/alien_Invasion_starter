@@ -83,6 +83,7 @@ class AlienInvasion:
             # Update game stats level
             self.game_stats.update_level()
             # Update HUD view 
+            self.HUD._update_level()
 
     
     def _check_game_status(self):
